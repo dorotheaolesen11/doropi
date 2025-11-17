@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root { --accent:#41363a; --bg:#f8fafc; --header-height:72px; }
+      *{box-sizing:border-box}
+      body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:#0f172a}
+      .site-header{display:flex;align-items:center;justify-content:space-between;height:var(--header-height);padding:0 1.25rem;background:linear-gradient(90deg, rgba(79,70,229,0.95), rgba(99,102,241,0.95));color:#fff}
+      .brand{display:flex;align-items:center;gap:.75rem}
+      .logo{width:40px;height:40px;border-radius:8px;background:rgba(182, 181, 181, 0.533);border:2px solid rgba(255,255,255,.12);display:inline-grid;place-items:center;font-weight:700;color:var(--accent)}
+      .site-title{font-weight:700;font-size:1.05rem;letter-spacing:0.2px}
+      nav a{color:rgba(255,255,255,.95);text-decoration:none;padding:.35rem .6rem;border-radius:6px;font-weight:600}
+      nav a:hover{background:rgba(255,255,255,.08)}
+      .hero{padding:3rem 1.25rem;text-align:left}
+      .hero h1{margin:0 0 .5rem;font-size:1.6rem;color:#334161}
+      .hero p{margin:0;color:#ba98b7}
+      .hero-image {width:100%;background:#e6e9ef}
+      .hero-image .img-wrap{max-width:1200px;margin:0 auto;padding:1rem}
+      .hero-image img{width:100%;height:320px;object-fit:cover;border-radius:10px;box-shadow:0 6px 18px rgba(11,15,28,0.08)}
+      @media(min-width:768px){
+        .hero{padding:4rem 3rem}
+        .hero h1{font-size:2.25rem}
+        .hero-image img{height:420px}
+      }
+    </style>
+</head>
+<body>
+    <header class="site-header" role="banner">
+      <div class="brand">
+        <div class="logo">DOH</div>
+        <div class="site-title">Dorothea Olesen</div>
+      </div>
+      <nav role="navigation" aria-label="Main">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero-image">
+      <div class="img-wrap">
+        <img src="/Users/doro/Desktop/337ece63850a26d04bdd205556d4ee71.jpg" alt="Hero image">
+      </div>
+    </section>
+
+    <main class="hero" id="home">
+      <h1>Hello world!</h1>
+      <p>I am a webpage made by Doro on her raspberry pi!</p>
+    </main>
+</body>
+</html>
