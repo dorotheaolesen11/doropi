@@ -10,7 +10,8 @@
       *{box-sizing:border-box}
       html, body{height:auto; overflow-y:auto}
       body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background-color:var(--bg); color:#0f172a; min-height:100vh;
-        background-image: url('./337ece63850a26d04bdd205556d4ee71.jpg');
+        /* Dark overlay so text in the card remains readable */
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./337ece63850a26d04bdd205556d4ee71.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -21,9 +22,14 @@
       .site-title{font-weight:700;font-size:1.05rem;letter-spacing:0.2px}
       nav a{color:rgba(255,255,255,.95);text-decoration:none;padding:.35rem .6rem;border-radius:6px;font-weight:600}
       nav a:hover{background:rgba(255,255,255,.08)}
-      .container{max-width:900px;margin:6rem auto;padding:2rem;background:rgba(255,255,255,0.85);border-radius:10px}
-      .container h1{margin-top:0}
-      .contact-list{line-height:1.8}
+    .hero{min-height:calc(100vh - var(--header-height));display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem 1.25rem;text-align:center;color:#fff}
+    .hero h1{margin:0 0 .5rem;font-size:2.75rem;color:#fff;font-weight:700;text-shadow:0 6px 20px rgba(0,0,0,0.35)}
+    .hero p{margin:0;color:rgba(255,255,255,0.92);font-size:1.125rem}
+    @media(min-width:768px){
+      .hero{padding:4rem 3rem}
+      .hero h1{font-size:4rem}
+      .hero p{font-size:1.25rem}
+    }
     </style>
 </head>
 <body>
@@ -33,17 +39,14 @@
       </div>
       <nav role="navigation" aria-label="Main">
         <a href="index.html">Home</a>
-        <a href="index.html#about">About</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
     </header>
 
-    <main class="container">
-      <h1>Contact</h1>
-      <div class="contact-list">
-        <div><strong>Name:</strong> Dorothea Olesen Halldórsdóttir</div>
-        <div><strong>Email:</strong> <a href="mailto:dorothea.olesen@gmail.com">dorothea.olesen@gmail.com</a></div>
-      </div>
+    <main class="hero">
+      <p><strong>Name:</strong> Dorothea Olesen Halldórsdóttir</p>
+      <p><strong>Email:</strong> <a href="mailto:dorothea.olesen@gmail.com" style="color:rgba(255,255,255,0.92);text-decoration:underline">dorothea.olesen@gmail.com</a></p>
     </main>
 </body>
 </html>
